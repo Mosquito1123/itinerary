@@ -11,10 +11,10 @@ import Foundation
 class TripFunctions {
     
     static func createTrip(tripModel: TripModel) {
-    
     }
     
     static func readTrip( completion: @escaping () -> () ) {
+        
         DispatchQueue.global(qos: .userInteractive).async {
             
             if Data.tripModels.count == 0 {
@@ -29,11 +29,9 @@ class TripFunctions {
     }
     
     static func updateTrip(tripModel: TripModel) {
-        
     }
     
     static func deleteTrip(tripModel: TripModel) {
-        
     }
     
 }
