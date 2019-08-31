@@ -12,6 +12,7 @@ import UIKit
 class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addTripsButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -25,6 +26,9 @@ class TripsViewController: UIViewController {
         })
         
         view.backgroundColor = Theme.background
+        
+        addTripsButton.backgroundColor = Theme.tint
+        addTripsButton.addFloatingAndRoundedStyle()
     }
 }
 

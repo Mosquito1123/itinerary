@@ -11,6 +11,7 @@ import UIKit
 extension UIView {
     
     func addShadowAndRoundedCorners() {
+        
         layer.shadowOpacity = 1 // make shadow visible
         layer.shadowOffset = CGSize.zero // change pozition of shadow
         layer.shadowColor = UIColor.darkGray.cgColor // change color of shadow

@@ -17,6 +17,7 @@
 		393CB8CD231A8AA000D33F24 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393CB8CC231A8AA000D33F24 /* Theme.swift */; };
 		393CB8CF231A8AD800D33F24 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393CB8CE231A8AD800D33F24 /* FugazOne-Regular.ttf */; };
 		393CB8D1231A8CC100D33F24 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393CB8D0231A8CC100D33F24 /* Colors.xcassets */; };
+		39CD99DD231ADCFB000D7624 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD99DC231ADCFB000D7624 /* UIButtonExtensions.swift */; };
 		39E61CBC2315B04F00820770 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E61CBB2315B04F00820770 /* TripsTableViewCell.swift */; };
 		39FAEDC723159F01008E0B5D /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */; };
 		39FAEDCB2315A26D008E0B5D /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEDCA2315A26D008E0B5D /* TripsViewController.swift */; };
@@ -35,6 +36,7 @@
 		393CB8CC231A8AA000D33F24 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		393CB8CE231A8AD800D33F24 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
 		393CB8D0231A8CC100D33F24 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		39CD99DC231ADCFB000D7624 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		39E61CBB2315B04F00820770 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		39FAEDCA2315A26D008E0B5D /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				393CB8C9231A800C00D33F24 /* UIViewExtensions.swift */,
+				39CD99DC231ADCFB000D7624 /* UIButtonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				39378C1823127FC200AA1389 /* Data.swift in Sources */,
 				390698612311B7410063FEB9 /* AppDelegate.swift in Sources */,
 				39378C1623127B5600AA1389 /* TripFunctions.swift in Sources */,
+				39CD99DD231ADCFB000D7624 /* UIButtonExtensions.swift in Sources */,
 				39378C1423127B4800AA1389 /* TripModel.swift in Sources */,
 				39FAEDCB2315A26D008E0B5D /* TripsViewController.swift in Sources */,
 			);

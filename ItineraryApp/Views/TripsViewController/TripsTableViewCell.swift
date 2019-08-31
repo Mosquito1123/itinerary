@@ -12,7 +12,6 @@ class TripsTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var cardView: UIView!
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     
@@ -20,7 +19,8 @@ class TripsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        addShadowAndRoundedCorners()
+        cardView.addShadowAndRoundedCorners()
+        
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
         cardView.backgroundColor = Theme.accent
     }
