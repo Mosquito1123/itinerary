@@ -72,6 +72,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uEv-gB-SjE" kind="presentation" identifier="toAddTripSegue" id="SLT-xT-1VC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -92,6 +95,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8w-ic-bbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="73.660714285714278"/>
+        </scene>
+        <!--AddTripViewController-->
+        <scene sceneID="Aq0-LW-8IU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripViewController" id="uEv-gB-SjE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyG-TR-Fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="75"/>
         </scene>
     </scenes>
 </document>

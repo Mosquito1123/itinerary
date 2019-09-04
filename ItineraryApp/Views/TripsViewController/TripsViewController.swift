@@ -5,7 +5,6 @@
 //  Created by Cosmin Iulian on 27/08/2019.
 //  Copyright © 2019 Cosmin Iulian. All rights reserved.
 //
-
 import UIKit
 
 
@@ -30,14 +29,30 @@ class TripsViewController: UIViewController {
         addTripsButton.backgroundColor = Theme.tint
         addTripsButton.addFloatingAndRoundedStyle()
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // ! !
+        
+        if segue.identifier == "toAddTripSegue" {
+            let popup = segue.destination as! AddTripViewController
+            
+            popup.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+        
+    }
+    
 }
 
 
 extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.tripModels.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -50,8 +65,10 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 160 // the heigth of the row
     }
+    
 }

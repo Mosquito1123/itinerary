@@ -5,8 +5,8 @@
 //  Created by Cosmin Iulian on 27/08/2019.
 //  Copyright © 2019 Cosmin Iulian. All rights reserved.
 //
-
 import UIKit
+
 
 class TripsTableViewCell: UITableViewCell {
     
@@ -24,6 +24,7 @@ class TripsTableViewCell: UITableViewCell {
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
         cardView.backgroundColor = Theme.accent
     }
+    
     
     func setup(tripModel: TripModel){
         
