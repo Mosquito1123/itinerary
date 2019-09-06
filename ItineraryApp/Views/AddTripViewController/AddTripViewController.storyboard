@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qwn-9B-AK6">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Trip View Controller-->
+        <scene sceneID="gqv-Xt-t0o">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="qwn-9B-AK6" customClass="AddTripViewController" customModule="ItineraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbU-of-cSm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNN-qw-rjz" userLabel="Popup View" customClass="PopupUIView" customModule="ItineraryApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="160"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qif-af-52M">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-7J-Yge">
+                                        <rect key="frame" x="15" y="20" width="299" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wKE-Lj-xXb">
+                                        <rect key="frame" x="15" y="51" width="344" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-hl-f0z" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="115" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="9Kc-am-r8s"/>
+                                            <constraint firstAttribute="height" constant="40" id="o6Z-nu-ZVx"/>
+                                        </constraints>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveBtnPressed:" destination="qwn-9B-AK6" eventType="touchUpInside" id="6DR-NQ-dlY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPV-N8-8up" userLabel="Cancel" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="115" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hAx-6S-w0A"/>
+                                            <constraint firstAttribute="width" constant="80" id="mc9-sX-ccF"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelBtnPressed:" destination="qwn-9B-AK6" eventType="touchUpInside" id="YjO-TX-OWg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geO-vr-EB9" userLabel="Add Image">
+                                        <rect key="frame" x="319" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1XL-5W-c3U"/>
+                                            <constraint firstAttribute="width" constant="40" id="NMN-lD-iqP"/>
+                                        </constraints>
+                                        <state key="normal" image="camera_icon"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="qwn-9B-AK6" eventType="touchUpInside" id="ATd-1H-sdF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CPV-N8-8up" secondAttribute="bottom" constant="5" id="5Sz-5C-gBz"/>
+                                    <constraint firstAttribute="height" constant="160" id="5bl-xR-Rqc"/>
+                                    <constraint firstAttribute="trailing" secondItem="qif-af-52M" secondAttribute="trailing" id="98G-uW-eqX"/>
+                                    <constraint firstItem="blJ-7J-Yge" firstAttribute="leading" secondItem="fNN-qw-rjz" secondAttribute="leading" constant="15" id="DrZ-Pl-Csn"/>
+                                    <constraint firstItem="qif-af-52M" firstAttribute="top" secondItem="fNN-qw-rjz" secondAttribute="top" id="ELT-Z5-yg1"/>
+                                    <constraint firstItem="CPV-N8-8up" firstAttribute="leading" secondItem="fNN-qw-rjz" secondAttribute="leading" constant="5" id="Gpo-xi-eYX"/>
+                                    <constraint firstItem="qif-af-52M" firstAttribute="leading" secondItem="fNN-qw-rjz" secondAttribute="leading" id="TYr-mV-pPJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="geO-vr-EB9" secondAttribute="trailing" constant="15" id="VDb-Nu-9Zt"/>
+                                    <constraint firstItem="wKE-Lj-xXb" firstAttribute="leading" secondItem="fNN-qw-rjz" secondAttribute="leading" constant="15" id="Vc9-Uv-ZJA"/>
+                                    <constraint firstItem="geO-vr-EB9" firstAttribute="top" secondItem="fNN-qw-rjz" secondAttribute="top" constant="5" id="bDK-Z8-NoF"/>
+                                    <constraint firstAttribute="trailing" secondItem="1cF-hl-f0z" secondAttribute="trailing" constant="5" id="c32-Rr-XyO"/>
+                                    <constraint firstItem="wKE-Lj-xXb" firstAttribute="top" secondItem="blJ-7J-Yge" secondAttribute="bottom" constant="10" id="d6J-9n-bId"/>
+                                    <constraint firstAttribute="bottom" secondItem="1cF-hl-f0z" secondAttribute="bottom" constant="5" id="hkJ-QD-RHa"/>
+                                    <constraint firstAttribute="trailing" secondItem="wKE-Lj-xXb" secondAttribute="trailing" constant="15" id="kFs-56-fw3"/>
+                                    <constraint firstAttribute="bottom" secondItem="qif-af-52M" secondAttribute="bottom" id="nAV-FX-7Nw"/>
+                                    <constraint firstItem="blJ-7J-Yge" firstAttribute="top" secondItem="fNN-qw-rjz" secondAttribute="top" constant="20" id="uYR-VG-Vts"/>
+                                    <constraint firstItem="geO-vr-EB9" firstAttribute="leading" secondItem="blJ-7J-Yge" secondAttribute="trailing" constant="5" id="xlw-RW-MeK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.3965646404109589" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DxP-iA-7Y8" firstAttribute="trailing" secondItem="fNN-qw-rjz" secondAttribute="trailing" constant="20" id="KDA-cW-8Hw"/>
+                            <constraint firstItem="fNN-qw-rjz" firstAttribute="leading" secondItem="DxP-iA-7Y8" secondAttribute="leading" constant="20" id="NQ7-VB-Hxx"/>
+                            <constraint firstItem="fNN-qw-rjz" firstAttribute="top" secondItem="DxP-iA-7Y8" secondAttribute="top" id="SXy-yj-QY5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DxP-iA-7Y8"/>
+                    </view>
+                    <connections>
+                        <outlet property="addTripLabel" destination="blJ-7J-Yge" id="VaW-Xu-KNk"/>
+                        <outlet property="cancelButton" destination="CPV-N8-8up" id="pBv-Zg-y1E"/>
+                        <outlet property="imageView" destination="qif-af-52M" id="Kow-wn-RE1"/>
+                        <outlet property="saveButton" destination="1cF-hl-f0z" id="cvK-2s-fFT"/>
+                        <outlet property="titleTripTextField" destination="wKE-Lj-xXb" id="93I-tW-Lnd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzK-M6-Luc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.44927536231887" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon" width="104" height="104"/>
+    </resources>
+</document>
