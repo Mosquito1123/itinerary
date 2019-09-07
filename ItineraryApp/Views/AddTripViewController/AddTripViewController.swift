@@ -19,6 +19,7 @@ class AddTripViewController: UIViewController {
     
     
     var doneSaving: (() -> ())? // a variable with type function
+    var tripIndexToEdit: Int?
     
     
     override func viewDidLoad() {
@@ -33,6 +34,13 @@ class AddTripViewController: UIViewController {
         addTripLabel.layer.shadowColor = UIColor.white.cgColor
         addTripLabel.layer.shadowOffset = CGSize.zero
         addTripLabel.layer.shadowRadius = 5
+        
+        // Verify if the index(element/member) already exists
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            titleTripTextField.text = trip.title
+            imageView.image = trip.image
+        }
     }
     
     // Save Button Pressed
@@ -43,7 +51,7 @@ class AddTripViewController: UIViewController {
         guard titleTripTextField.text != "", let newTripTitle = titleTripTextField.text else {
             
             let alertImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 25))
-            alertImageView.image = UIImage(named: "warning_icon")
+            alertImageView.image = #imageLiteral(resourceName: "warning_icon")
             alertImageView.contentMode = .scaleAspectFit
             
             titleTripTextField.rightView = alertImageView
@@ -51,9 +59,12 @@ class AddTripViewController: UIViewController {
             titleTripTextField.rightViewMode = .always
             return
         }
-        
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripTitle, image: imageView.image)
+        } else {
         // create a trip with the title of text field
         TripFunctions.createTrip(tripModel: TripModel(title: newTripTitle, image: imageView.image))
+        }
         
         if let doneSaving = doneSaving {
             doneSaving()
