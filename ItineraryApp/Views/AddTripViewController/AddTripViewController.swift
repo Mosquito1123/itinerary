@@ -77,59 +77,57 @@ class AddTripViewController: UIViewController {
     
     // Add photo button pressed
     @IBAction func addPhoto(_ sender: UIButton) {
-        // if exists photos in library then
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            PHPhotoLibrary.requestAuthorization { (status) in
-                switch status {
-                    
-                case .authorized:
+        
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+                
+            case .authorized:
+                self.presentImagePickerController()
+                
+            case .notDetermined:
+                if status == PHAuthorizationStatus.authorized{
                     self.presentImagePickerController()
-                    
-                case .notDetermined:
-                    if status == PHAuthorizationStatus.authorized{
-                        self.presentImagePickerController()
-                    }
-                    
-                case .restricted:
-                    let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library acces is restricted and cannot be accesed.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true)
-                    
-                case .denied:
-                    let alert = UIAlertController(title: "Photo Library Acces Denied", message: "Photo Library acces was previosly denied. Please update your Settings if you wish to change this.    ", preferredStyle: .alert)
-                    let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
-                        DispatchQueue.main.async {
-                            let url = URL(string: UIApplication.openSettingsURLString)!
-                            UIApplication.shared.open(url, options: [ : ])
-                        }
-                    }
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-                    
-                    alert.addAction(goToSettingsAction)
-                    alert.addAction(cancelAction)
-                    self.present(alert, animated: true)
-                    
-                @unknown default:
-                    let alert = UIAlertController(title: "Unknown", message: "Unknown error!", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true)
-                    
                 }
+                
+            case .restricted:
+                let alert = UIAlertController(title: "Photo Library Restricted", message: "Photo Library acces is restricted and cannot be accesed.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
+                
+            case .denied:
+                let alert = UIAlertController(title: "Photo Library Acces Denied", message: "Photo Library acces was previosly denied. Please update your Settings if you wish to change this.    ", preferredStyle: .alert)
+                let goToSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) { (action) in
+                    DispatchQueue.main.async {
+                        let url = URL(string: UIApplication.openSettingsURLString)!
+                        UIApplication.shared.open(url, options: [ : ])
+                    }
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                
+                alert.addAction(goToSettingsAction)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true)
+                
+            @unknown default:
+                let alert = UIAlertController(title: "Unknown", message: "Unknown error!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
+                
             }
         }
-        
     }
     
 }
+
 
 
 extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // when we have a image, then the image is stored in 'image' variable
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
         }
         
