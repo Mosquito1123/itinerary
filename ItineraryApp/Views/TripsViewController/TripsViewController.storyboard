@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -97,10 +98,63 @@
                     </view>
                     <connections>
                         <outlet property="addTripsButton" destination="F9B-KC-kO1" id="61J-s0-6Us"/>
+                        <outlet property="helpView" destination="2Ac-vw-Iq1" id="bSn-de-Bsa"/>
                         <outlet property="tableView" destination="Ipl-1K-Cwp" id="RdE-Pt-LPi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8w-ic-bbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="2Ac-vw-Iq1">
+                    <rect key="frame" x="0.0" y="0.0" width="380" height="650"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lj8-ZH-4jd">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-TK-9C1">
+                                <rect key="frame" x="18" y="40" width="344" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-pI-g1R">
+                                        <rect key="frame" x="59" y="0.0" width="226.5" height="84"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_swipe" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-DX-aa7">
+                                        <rect key="frame" x="0.0" y="92" width="344" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Tsx-11-Sk8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_swipe" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-vY-iqL">
+                                        <rect key="frame" x="0.0" y="250" width="344" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="afc-6c-jGN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YH-yI-Rfo" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
+                                <rect key="frame" x="18" y="566" width="344" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RFW-MH-yhe"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeInfoBtn:" destination="NvG-66-iNG" eventType="touchUpInside" id="SeM-JM-hdr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="AFv-TK-9C1" firstAttribute="top" secondItem="Lj8-ZH-4jd" secondAttribute="top" constant="40" id="Ghh-Pv-eQ5"/>
+                            <constraint firstItem="AFv-TK-9C1" firstAttribute="leading" secondItem="Lj8-ZH-4jd" secondAttribute="leading" constant="18" id="VzU-a0-FNd"/>
+                            <constraint firstItem="3YH-yI-Rfo" firstAttribute="leading" secondItem="Lj8-ZH-4jd" secondAttribute="leading" constant="18" id="Z64-4W-rrc"/>
+                            <constraint firstAttribute="bottom" secondItem="3YH-yI-Rfo" secondAttribute="bottom" constant="40" id="gow-KR-XmR"/>
+                            <constraint firstAttribute="trailing" secondItem="3YH-yI-Rfo" secondAttribute="trailing" constant="18" id="hZO-Qj-rN8"/>
+                            <constraint firstAttribute="trailing" secondItem="AFv-TK-9C1" secondAttribute="trailing" constant="18" id="qpX-UJ-iCd"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="73.660714285714278"/>
         </scene>
@@ -113,4 +167,8 @@
             <point key="canvasLocation" x="702" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delete_swipe" width="500" height="202"/>
+        <image name="edit_swipe" width="500" height="202"/>
+    </resources>
 </document>
