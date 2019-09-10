@@ -83,6 +83,7 @@ class AddTripViewController: UIViewController {
         let myPickerController = UIImagePickerController()
         
         myPickerController.delegate = self
+        myPickerController.allowsEditing = true // able to editing
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true)
     }
@@ -138,10 +139,15 @@ class AddTripViewController: UIViewController {
 extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // when we have a image, then the image is stored in 'image' variable
-        if let image = info[.originalImage] as? UIImage {
+        
+        // if the image is edited then
+        if let image = info[.editedImage] as? UIImage {
             self.imageView.image = image
+        } else  // when we have a image, then the image is stored in 'image' variable
+            if let image = info[.originalImage] as? UIImage {
+                self.imageView.image = image
         }
+        
         
         dismiss(animated: true)
     }
