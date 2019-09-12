@@ -72,19 +72,16 @@ class TripsViewController: UIViewController {
 
 extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
     // the number of cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Data.tripModels.count
     }
-    
     
     // the content of cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell // for optimize I use
         // dequeueReusableCell
-        
         
         cell.setup(tripModel: Data.tripModels[indexPath.row])
         
@@ -125,10 +122,10 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         delete.image = #imageLiteral(resourceName: "delete_icon")
         
         
-        
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
+    // Leading Swipe Action (Edit Action)
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed:(Bool) -> ()) in
@@ -141,4 +138,17 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: [edit])
     }
+    
+    /* row selected function */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       //Extract the current trip
+        let trip = Data.tripModels[indexPath.row]
+        
+        /* Navigate to ActivitiesViewController */
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -13,12 +13,18 @@ class TripModel {
     let id: UUID // this is not a string because I optimized memory in that way
     var title: String
     var image: UIImage?
+    var dayModels = [DayModel]() // model of days
     
     
-    init(title: String, image: UIImage? = nil) {
+    init(title: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
         id = UUID()
         self.title = title
         self.image = image
+        
+        // if the day exists, then add to the DayModel array
+        if let dayModels = dayModels {
+            self.dayModels = dayModels
+        }
     }
     
 }

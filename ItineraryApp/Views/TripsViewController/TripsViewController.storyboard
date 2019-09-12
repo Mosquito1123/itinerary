@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NvG-66-iNG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FbT-R9-nEX">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,11 +17,11 @@
             <objects>
                 <viewController id="NvG-66-iNG" customClass="TripsViewController" customModule="ItineraryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ttf-9h-0qh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-1K-Cwp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="J6p-wU-YPU" customClass="TripsTableViewCell" customModule="ItineraryApp" customModuleProvider="target">
@@ -72,7 +73,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-KC-kO1">
-                                <rect key="frame" x="329" y="811" width="65" height="65"/>
+                                <rect key="frame" x="329" y="723" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="EOt-EZ-gSY"/>
                                     <constraint firstAttribute="height" constant="65" id="lnr-iP-iRR"/>
@@ -96,6 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PIE-1e-gdO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Owh-wG-mfm"/>
                     <connections>
                         <outlet property="addTripsButton" destination="F9B-KC-kO1" id="61J-s0-6Us"/>
                         <outlet property="helpView" destination="2Ac-vw-Iq1" id="bSn-de-Bsa"/>
@@ -156,7 +158,7 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="-52.173913043478265" y="73.660714285714278"/>
+            <point key="canvasLocation" x="857.97101449275374" y="73.660714285714278"/>
         </scene>
         <!--AddTripViewController-->
         <scene sceneID="Aq0-LW-8IU">
@@ -164,11 +166,37 @@
                 <viewControllerPlaceholder storyboardName="AddTripViewController" id="uEv-gB-SjE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyG-TR-Fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="75"/>
+            <point key="canvasLocation" x="1611.5942028985507" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zcU-5y-BH6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FbT-R9-nEX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NmR-qg-m8H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Tint"/>
+                        <color key="barTintColor" name="Background"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NvG-66-iNG" kind="relationship" relationship="rootViewController" id="jLw-iy-JA4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21n-xj-gAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="73.660714285714278"/>
         </scene>
     </scenes>
     <resources>
         <image name="delete_swipe" width="500" height="202"/>
         <image name="edit_swipe" width="500" height="202"/>
+        <namedColor name="Background">
+            <color red="0.8666666666666667" green="0.85490196078431369" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="1" green="0.23921568627450981" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

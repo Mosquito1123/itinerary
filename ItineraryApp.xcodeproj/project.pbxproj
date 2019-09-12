@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		390698612311B7410063FEB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390698602311B7410063FEB9 /* AppDelegate.swift */; };
 		3906986B2311B7430063FEB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390698692311B7430063FEB9 /* LaunchScreen.storyboard */; };
+		392E7F0A2327D5A100B03B15 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392E7F092327D5A100B03B15 /* ActivitiesViewController.storyboard */; };
+		392E7F0C2327D5C000B03B15 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E7F0B2327D5C000B03B15 /* ActivitiesViewController.swift */; };
 		39378C1423127B4800AA1389 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39378C1323127B4800AA1389 /* TripModel.swift */; };
 		39378C1623127B5600AA1389 /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39378C1523127B5600AA1389 /* TripFunctions.swift */; };
 		39378C1823127FC200AA1389 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39378C1723127FC200AA1389 /* Data.swift */; };
@@ -21,6 +23,10 @@
 		3969B142231FF3C70000E1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3969B141231FF3C70000E1CC /* Assets.xcassets */; };
 		39B63F3D231D5C2300D9965E /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B63F3C231D5C2300D9965E /* AddTripViewController.storyboard */; };
 		39B63F40231D5C6C00D9965E /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B63F3F231D5C6C00D9965E /* AddTripViewController.swift */; };
+		39BBFB74232916670023A772 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBFB73232916670023A772 /* DayModel.swift */; };
+		39BBFB77232918030023A772 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBFB76232918030023A772 /* ActivityModel.swift */; };
+		39BBFB79232919850023A772 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBFB78232919850023A772 /* ActivityTypeEnum.swift */; };
+		39BBFB7B23291BFC0023A772 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BBFB7A23291BFC0023A772 /* MockData.swift */; };
 		39CD99DD231ADCFB000D7624 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD99DC231ADCFB000D7624 /* UIButtonExtensions.swift */; };
 		39E61CBC2315B04F00820770 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E61CBB2315B04F00820770 /* TripsTableViewCell.swift */; };
 		39FAEDC723159F01008E0B5D /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */; };
@@ -32,6 +38,8 @@
 		390698602311B7410063FEB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3906986A2311B7430063FEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3906986C2311B7430063FEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392E7F092327D5A100B03B15 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		392E7F0B2327D5C000B03B15 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		39378C1323127B4800AA1389 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		39378C1523127B5600AA1389 /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		39378C1723127FC200AA1389 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -44,6 +52,10 @@
 		3969B141231FF3C70000E1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B63F3C231D5C2300D9965E /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		39B63F3F231D5C6C00D9965E /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		39BBFB73232916670023A772 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		39BBFB76232918030023A772 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		39BBFB78232919850023A772 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		39BBFB7A23291BFC0023A772 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		39CD99DC231ADCFB000D7624 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		39E61CBB2315B04F00820770 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
@@ -91,11 +103,23 @@
 			path = ItineraryApp;
 			sourceTree = "<group>";
 		};
+		392E7F082327D56000B03B15 /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				392E7F092327D5A100B03B15 /* ActivitiesViewController.storyboard */,
+				392E7F0B2327D5C000B03B15 /* ActivitiesViewController.swift */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
 		39378C1123127B1A00AA1389 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				39378C1723127FC200AA1389 /* Data.swift */,
+				39BBFB7A23291BFC0023A772 /* MockData.swift */,
 				39378C1223127B2800AA1389 /* Trip */,
+				39BBFB72232916410023A772 /* Day */,
+				39BBFB75232917D70023A772 /* Activity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,11 +172,29 @@
 			path = AddTripViewController;
 			sourceTree = "<group>";
 		};
+		39BBFB72232916410023A772 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				39BBFB73232916670023A772 /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		39BBFB75232917D70023A772 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				39BBFB76232918030023A772 /* ActivityModel.swift */,
+				39BBFB78232919850023A772 /* ActivityTypeEnum.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		39FAEDC423159E7E008E0B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				39B63F3E231D5C2900D9965E /* AddTripViewController */,
 				39FAEDC523159EBA008E0B5D /* TripsViewController */,
+				39B63F3E231D5C2900D9965E /* AddTripViewController */,
+				392E7F082327D56000B03B15 /* ActivitiesViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +270,7 @@
 				39B63F3D231D5C2300D9965E /* AddTripViewController.storyboard in Resources */,
 				393CB8D1231A8CC100D33F24 /* Colors.xcassets in Resources */,
 				3906986B2311B7430063FEB9 /* LaunchScreen.storyboard in Resources */,
+				392E7F0A2327D5A100B03B15 /* ActivitiesViewController.storyboard in Resources */,
 				39FAEDC723159F01008E0B5D /* TripsViewController.storyboard in Resources */,
 				3969B142231FF3C70000E1CC /* Assets.xcassets in Resources */,
 				393CB8CF231A8AD800D33F24 /* FugazOne-Regular.ttf in Resources */,
@@ -243,8 +286,13 @@
 			files = (
 				39E61CBC2315B04F00820770 /* TripsTableViewCell.swift in Sources */,
 				393CB8CD231A8AA000D33F24 /* Theme.swift in Sources */,
+				39BBFB74232916670023A772 /* DayModel.swift in Sources */,
+				39BBFB7B23291BFC0023A772 /* MockData.swift in Sources */,
 				393CB8CA231A800C00D33F24 /* UIViewExtensions.swift in Sources */,
 				39378C1823127FC200AA1389 /* Data.swift in Sources */,
+				39BBFB79232919850023A772 /* ActivityTypeEnum.swift in Sources */,
+				39BBFB77232918030023A772 /* ActivityModel.swift in Sources */,
+				392E7F0C2327D5C000B03B15 /* ActivitiesViewController.swift in Sources */,
 				394A2C29231D7E0A0043D090 /* PopupUIButton.swift in Sources */,
 				390698612311B7410063FEB9 /* AppDelegate.swift in Sources */,
 				39B63F40231D5C6C00D9965E /* AddTripViewController.swift in Sources */,
