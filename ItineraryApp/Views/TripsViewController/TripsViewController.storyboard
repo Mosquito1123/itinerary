@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Trips View Controller-->
+        <!--Trips-->
         <scene sceneID="KQ3-l0-h8V">
             <objects>
                 <viewController id="NvG-66-iNG" customClass="TripsViewController" customModule="ItineraryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,15 +20,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-1K-Cwp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-1K-Cwp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="J6p-wU-YPU" customClass="TripsTableViewCell" customModule="ItineraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripsTableViewCell" rowHeight="140" id="J6p-wU-YPU" customClass="TripsTableViewCell" customModule="ItineraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J6p-wU-YPU" id="3dM-BC-6gm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-Wy-qBe">
@@ -79,7 +79,8 @@
                                     <constraint firstAttribute="height" constant="65" id="lnr-iP-iRR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="+">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus_icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -97,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PIE-1e-gdO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Owh-wG-mfm"/>
+                    <navigationItem key="navigationItem" title="Trips" id="Owh-wG-mfm"/>
                     <connections>
                         <outlet property="addTripsButton" destination="F9B-KC-kO1" id="61J-s0-6Us"/>
                         <outlet property="helpView" destination="2Ac-vw-Iq1" id="bSn-de-Bsa"/>
@@ -106,29 +107,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8w-ic-bbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" id="2Ac-vw-Iq1">
-                    <rect key="frame" x="0.0" y="0.0" width="380" height="650"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lj8-ZH-4jd">
-                        <rect key="frame" x="0.0" y="0.0" width="380" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-TK-9C1">
-                                <rect key="frame" x="18" y="40" width="344" height="400"/>
+                                <rect key="frame" x="18" y="40" width="378" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-pI-g1R">
-                                        <rect key="frame" x="59" y="0.0" width="226.5" height="84"/>
+                                        <rect key="frame" x="76" y="0.0" width="226.5" height="84"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_swipe" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-DX-aa7">
-                                        <rect key="frame" x="0.0" y="92" width="344" height="150"/>
+                                        <rect key="frame" x="0.0" y="92" width="378" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Tsx-11-Sk8"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_swipe" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-vY-iqL">
-                                        <rect key="frame" x="0.0" y="250" width="344" height="150"/>
+                                        <rect key="frame" x="0.0" y="250" width="378" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="afc-6c-jGN"/>
                                         </constraints>
@@ -136,7 +137,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YH-yI-Rfo" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
-                                <rect key="frame" x="18" y="566" width="344" height="44"/>
+                                <rect key="frame" x="18" y="718" width="378" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RFW-MH-yhe"/>
                                 </constraints>
@@ -173,11 +174,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FbT-R9-nEX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NmR-qg-m8H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="NmR-qg-m8H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Tint"/>
-                        <color key="barTintColor" name="Background"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -192,9 +192,7 @@
     <resources>
         <image name="delete_swipe" width="500" height="202"/>
         <image name="edit_swipe" width="500" height="202"/>
-        <namedColor name="Background">
-            <color red="0.8666666666666667" green="0.85490196078431369" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="plus_icon" width="100" height="100"/>
         <namedColor name="Tint">
             <color red="1" green="0.23921568627450981" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

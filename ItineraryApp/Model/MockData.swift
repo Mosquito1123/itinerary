@@ -14,8 +14,8 @@ class MockData {
         
         var mockTrips = [TripModel]()
         mockTrips.append(TripModel(title: "New York", image:#imageLiteral(resourceName: "new_york"), dayModels: createMockTitleModelData()))
-        mockTrips.append(TripModel(title: "Los Angeles", image: #imageLiteral(resourceName: "los_angeles")))
-        mockTrips.append(TripModel(title: "Japan"))
+        mockTrips.append(TripModel(title: "Japan", image: #imageLiteral(resourceName: "japan")))
+        mockTrips.append(TripModel(title: "Los Angeles"))
         
         return mockTrips
     }
@@ -38,21 +38,21 @@ class MockData {
         var mockSectionModel = [ActivityModel]()
         
         if(sectionTitle == "April 18") {
-            mockSectionModel.append(ActivityModel(title: "Exploring the city", subtitle: "Cool exploring", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Diving to the city", subtitle: "Cool diving", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Eat some food", subtitle: "Cool eat", activityType: .food))
+            mockSectionModel.append(ActivityModel(title: "Mock data1", subtitle: "Excursion", activityType: .excursion))
+            mockSectionModel.append(ActivityModel(title: "Mock data1", subtitle: "Auto", activityType: .auto))
+            mockSectionModel.append(ActivityModel(title: "Mock data1", subtitle: "Food", activityType: .food))
         }
         
         if(sectionTitle == "April 19") {
-            mockSectionModel.append(ActivityModel(title: "Exploring1 the city", subtitle: "Cool exploring", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Diving1 to the city", subtitle: "Cool diving", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Eat1 some food", subtitle: "Cool eat", activityType: .food))
+            mockSectionModel.append(ActivityModel(title: "Mock data2", subtitle: "Excursion", activityType: .excursion))
+            mockSectionModel.append(ActivityModel(title: "Mock data2", subtitle: "Flight", activityType: .flight))
+            mockSectionModel.append(ActivityModel(title: "Mock data2", subtitle: "Food", activityType: .food))
         }
         
         if(sectionTitle == "April 20") {
-            mockSectionModel.append(ActivityModel(title: "Exploring2 the city", subtitle: "Cool exploring", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Diving2 to the city", subtitle: "Cool diving", activityType: .excursion))
-            mockSectionModel.append(ActivityModel(title: "Eat2 some food", subtitle: "Cool eat", activityType: .food))
+            mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Excursion", activityType: .excursion))
+            mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Hotel", activityType: .hotel))
+            mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Food", activityType: .food))
         }
         
         return mockSectionModel

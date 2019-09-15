@@ -29,8 +29,8 @@ class TripsViewController: UIViewController {
             
             if Data.tripModels.count > 0 { // if exists row then show up the help view
                 if UserDefaults.standard.bool(forKey: self.seenHelpView) == false{ // if the help view was seen
-                    self.view.addSubview(self.helpView)    // set the
-                    self.helpView.frame = self.view.frame //     help view
+                    //self.view.addSubview(self.helpView)    // set the    !!!!!!
+                    //self.helpView.frame = self.view.frame //     help view
                 }
             }
         })
@@ -80,7 +80,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     // the content of cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell // for optimize I use
+        let cell = tableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.Identifier) as! TripsTableViewCell // for optimize I use
         // dequeueReusableCell
         
         cell.setup(tripModel: Data.tripModels[indexPath.row])
@@ -148,6 +148,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
         vc.tripId = trip.id
+        vc.tripTitle = trip.title
         navigationController?.pushViewController(vc, animated: true)
     }
     
