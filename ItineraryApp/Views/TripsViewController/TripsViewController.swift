@@ -29,8 +29,9 @@ class TripsViewController: UIViewController {
             
             if Data.tripModels.count > 0 { // if exists row then show up the help view
                 if UserDefaults.standard.bool(forKey: self.seenHelpView) == false{ // if the help view was seen
-                    //self.view.addSubview(self.helpView)    // set the    !!!!!!
-                    //self.helpView.frame = self.view.frame //     help view
+                    self.view.addSubview(self.helpView)    // set the
+                    self.helpView.frame = self.view.bounds //     help view
+                    // ! Tips: 'bounds' always have origins at (0,0)
                 }
             }
         })
@@ -145,8 +146,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         let trip = Data.tripModels[indexPath.row]
         
         /* Navigate to ActivitiesViewController */
-        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
-        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        let vc = ActivitiesViewController.getInstance() as! ActivitiesViewController
         vc.tripId = trip.id
         vc.tripTitle = trip.title
         navigationController?.pushViewController(vc, animated: true)

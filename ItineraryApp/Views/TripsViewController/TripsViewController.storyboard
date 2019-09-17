@@ -32,13 +32,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-Wy-qBe">
-                                                    <rect key="frame" x="20" y="5" width="374" height="129.5"/>
+                                                    <rect key="frame" x="20" y="5" width="374" height="130"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="leC-gU-IHp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="129.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5j-VO-smY">
-                                                            <rect key="frame" x="20" y="20" width="334" height="89.5"/>
+                                                            <rect key="frame" x="20" y="20" width="334" height="90"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -73,10 +73,10 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-KC-kO1">
-                                <rect key="frame" x="329" y="723" width="65" height="65"/>
+                                <rect key="frame" x="334" y="714" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="EOt-EZ-gSY"/>
-                                    <constraint firstAttribute="height" constant="65" id="lnr-iP-iRR"/>
+                                    <constraint firstAttribute="width" constant="60" id="EOt-EZ-gSY"/>
+                                    <constraint firstAttribute="height" constant="60" id="lnr-iP-iRR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,10 +91,10 @@
                         <constraints>
                             <constraint firstItem="Ipl-1K-Cwp" firstAttribute="top" secondItem="ttf-9h-0qh" secondAttribute="top" id="EhR-Vu-01f"/>
                             <constraint firstItem="Ipl-1K-Cwp" firstAttribute="leading" secondItem="ttf-9h-0qh" secondAttribute="leading" id="TvY-Jb-yVz"/>
-                            <constraint firstAttribute="trailing" secondItem="F9B-KC-kO1" secondAttribute="trailing" constant="20" id="Vxz-xV-krl"/>
+                            <constraint firstItem="PIE-1e-gdO" firstAttribute="trailing" secondItem="F9B-KC-kO1" secondAttribute="trailing" constant="20" id="Vxz-xV-krl"/>
                             <constraint firstAttribute="bottom" secondItem="Ipl-1K-Cwp" secondAttribute="bottom" id="eVU-rl-7VQ"/>
                             <constraint firstAttribute="trailing" secondItem="Ipl-1K-Cwp" secondAttribute="trailing" id="jBu-ry-toA"/>
-                            <constraint firstAttribute="bottom" secondItem="F9B-KC-kO1" secondAttribute="bottom" constant="20" id="r4U-0l-NMo"/>
+                            <constraint firstItem="PIE-1e-gdO" firstAttribute="bottom" secondItem="F9B-KC-kO1" secondAttribute="bottom" id="r4U-0l-NMo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PIE-1e-gdO"/>
                     </view>

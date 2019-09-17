@@ -35,7 +35,7 @@
                                         <rect key="frame" x="15" y="51" width="344" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-hl-f0z" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
                                         <rect key="frame" x="289" y="115" width="80" height="40"/>
@@ -118,7 +118,7 @@
     <resources>
         <image name="camera_icon" width="104" height="104"/>
         <namedColor name="Tint">
-            <color red="1" green="0.090196078431372548" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23921568627450981" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

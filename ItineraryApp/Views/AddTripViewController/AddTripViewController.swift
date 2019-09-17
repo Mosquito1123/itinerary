@@ -13,8 +13,8 @@ class AddTripViewController: UIViewController {
     
     @IBOutlet weak var addTripLabel: UILabel!
     @IBOutlet weak var titleTripTextField: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     
@@ -44,37 +44,27 @@ class AddTripViewController: UIViewController {
         }
     }
     
+    // Cancel Button Pressed
+    @IBAction func cancelBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
     // Save Button Pressed
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         
-        titleTripTextField.rightViewMode = .never
+        guard titleTripTextField.hasValue, let newTripTitle = titleTripTextField.text else { return }
         
-        guard titleTripTextField.text != "", let newTripTitle = titleTripTextField.text else {
-            
-            let alertImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 25))
-            alertImageView.image = #imageLiteral(resourceName: "warning_icon")
-            alertImageView.contentMode = .scaleAspectFit
-            
-            titleTripTextField.rightView = alertImageView
-            
-            titleTripTextField.rightViewMode = .always
-            return
-        }
         if let index = tripIndexToEdit {
             TripFunctions.updateTrip(at: index, title: newTripTitle, image: imageView.image)
         } else {
-        // create a trip with the title of text field
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripTitle, image: imageView.image))
+            // create a trip with the title of text field
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripTitle, image: imageView.image))
         }
         
         if let doneSaving = doneSaving {
             doneSaving()
         }
-        dismiss(animated: true)
-    }
-    
-    // Cancel Button Pressed
-    @IBAction func cancelBtnPressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
