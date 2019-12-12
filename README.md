@@ -1,7 +1,7 @@
 # ItineraryApp
 
-<a href="https://imgflip.com/gif/3j8zsd"><img src="https://i.imgflip.com/3j8zsd.gif"/></a>
+<img src="https://i.imgflip.com/3j8zsd.gif"/>
 
-<a href = "https://imgur.com/HdTngqb"> </a>
+<img src="https://imgur.com/HdTngqb"/>
 
-<a href="https://imgflip.com/gif/3j90pb"><img src="https://i.imgflip.com/3j90pb.gif"/></a>
+<img src="https://i.imgflip.com/3j90pb.gif"/>
