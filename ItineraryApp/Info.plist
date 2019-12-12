@@ -47,5 +47,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Use photos to add more details for your trips!</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

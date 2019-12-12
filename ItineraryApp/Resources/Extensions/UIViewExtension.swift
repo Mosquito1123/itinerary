@@ -17,5 +17,4 @@ extension UIView {
         layer.shadowColor = UIColor.darkGray.cgColor // change color of shadow
         layer.cornerRadius = 10 // Add corner radius
     }
-    
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T0B-Vf-4ha">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T0B-Vf-4ha">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,39 +11,43 @@
         <!--Add Day View Controller-->
         <scene sceneID="Y5Q-cS-3ne">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7a-Hy-G93" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="T0B-Vf-4ha" customClass="AddDayViewController" customModule="ItineraryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="69s-Pa-x7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyK-sy-kbV" userLabel="Popup View" customClass="PopupUIView" customModule="ItineraryApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="374" height="200"/>
+                                <rect key="frame" x="20" y="44" width="374" height="290"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCc-m0-ol1">
-                                        <rect key="frame" x="15" y="20" width="65" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="10" y="10" width="75" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title or date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-dC-FTd">
-                                        <rect key="frame" x="15" y="51" width="344" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-Ch-D2A">
+                                        <rect key="frame" x="0.0" y="44" width="374" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Fyl-V0-1P2"/>
+                                        </constraints>
+                                    </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-jh-Shy">
-                                        <rect key="frame" x="15" y="96" width="344" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="10" y="194" width="354" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aUN-Jd-HWX"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="doneAction:" destination="T0B-Vf-4ha" eventType="primaryActionTriggered" id="O3f-Vp-ylK"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-hd-CJ4" userLabel="Cancel" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="155" width="80" height="40"/>
+                                        <rect key="frame" x="5" y="245" width="80" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Kiy-tn-S2L"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZOx-iO-Aij"/>
-                                            <constraint firstAttribute="height" constant="40" id="iFd-bA-UEF"/>
-                                            <constraint firstAttribute="width" constant="80" id="q4R-Kn-Yad"/>
+                                            <constraint firstAttribute="width" constant="80" id="efZ-vl-exS"/>
+                                            <constraint firstAttribute="height" constant="40" id="p0w-Cr-uOo"/>
                                         </constraints>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
@@ -53,12 +55,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhz-DV-ZAQ" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
-                                        <rect key="frame" x="294" y="155" width="80" height="40"/>
+                                        <rect key="frame" x="289" y="245" width="80" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="C2J-6o-Rmc"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="PfY-3f-bTX"/>
-                                            <constraint firstAttribute="width" constant="80" id="dfh-jz-hRX"/>
-                                            <constraint firstAttribute="height" constant="40" id="wmr-TD-8ZW"/>
+                                            <constraint firstAttribute="height" constant="40" id="Xuu-Cx-lHZ"/>
+                                            <constraint firstAttribute="width" constant="80" id="s86-4x-A9I"/>
                                         </constraints>
                                         <state key="normal" title="Save"/>
                                         <connections>
@@ -68,39 +68,38 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="c4c-hd-CJ4" secondAttribute="bottom" constant="5" id="7St-MQ-1yv"/>
-                                    <constraint firstAttribute="trailing" secondItem="cwn-jh-Shy" secondAttribute="trailing" constant="15" id="Dfq-tR-frs"/>
-                                    <constraint firstItem="yCc-m0-ol1" firstAttribute="top" secondItem="lyK-sy-kbV" secondAttribute="top" constant="20" id="K36-6h-uSF"/>
-                                    <constraint firstAttribute="height" constant="200" id="Sgf-xJ-hFU"/>
-                                    <constraint firstItem="c4c-hd-CJ4" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="5" id="Xnd-PI-p6S"/>
-                                    <constraint firstItem="yCc-m0-ol1" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="15" id="cqo-Q0-v8y"/>
-                                    <constraint firstItem="cwn-jh-Shy" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="15" id="iWP-Eo-PCy"/>
-                                    <constraint firstItem="Ssh-dC-FTd" firstAttribute="top" secondItem="yCc-m0-ol1" secondAttribute="bottom" constant="10" id="jIz-fx-mG7"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nhz-DV-ZAQ" secondAttribute="trailing" id="or8-Bk-zf5"/>
-                                    <constraint firstItem="Ssh-dC-FTd" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="15" id="sSd-Y7-zRc"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ssh-dC-FTd" secondAttribute="trailing" constant="15" id="tEJ-cR-sGx"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nhz-DV-ZAQ" secondAttribute="bottom" constant="5" id="vqL-4u-6NV"/>
-                                    <constraint firstItem="cwn-jh-Shy" firstAttribute="top" secondItem="Ssh-dC-FTd" secondAttribute="bottom" constant="15" id="zlc-IV-dCf"/>
+                                    <constraint firstAttribute="height" constant="290" id="3Yx-KM-suX"/>
+                                    <constraint firstItem="cwn-jh-Shy" firstAttribute="top" secondItem="Ykw-Ch-D2A" secondAttribute="bottom" constant="10" id="5Bu-qJ-RKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="cwn-jh-Shy" secondAttribute="trailing" constant="10" id="78X-uQ-Cy9"/>
+                                    <constraint firstItem="Ykw-Ch-D2A" firstAttribute="top" secondItem="yCc-m0-ol1" secondAttribute="bottom" constant="10" id="9Gh-03-yrK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nhz-DV-ZAQ" secondAttribute="trailing" constant="5" id="9x4-ZG-K8e"/>
+                                    <constraint firstItem="yCc-m0-ol1" firstAttribute="top" secondItem="lyK-sy-kbV" secondAttribute="top" constant="10" id="CgW-We-ik2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ykw-Ch-D2A" secondAttribute="trailing" id="I0n-k5-yMK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nhz-DV-ZAQ" secondAttribute="bottom" constant="5" id="W5M-rQ-LM6"/>
+                                    <constraint firstItem="yCc-m0-ol1" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="10" id="Yj1-e0-30O"/>
+                                    <constraint firstItem="Ykw-Ch-D2A" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" id="cvj-0C-WpF"/>
+                                    <constraint firstAttribute="bottom" secondItem="c4c-hd-CJ4" secondAttribute="bottom" constant="5" id="hIr-C2-6W9"/>
+                                    <constraint firstItem="cwn-jh-Shy" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="10" id="l8I-FP-hqd"/>
+                                    <constraint firstItem="c4c-hd-CJ4" firstAttribute="leading" secondItem="lyK-sy-kbV" secondAttribute="leading" constant="5" id="pym-JT-Sqh"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.39685894691780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oNE-3O-g2r" firstAttribute="trailing" secondItem="lyK-sy-kbV" secondAttribute="trailing" constant="20" id="542-yy-s8g"/>
-                            <constraint firstItem="lyK-sy-kbV" firstAttribute="leading" secondItem="oNE-3O-g2r" secondAttribute="leading" constant="20" id="YnC-9m-loq"/>
-                            <constraint firstItem="lyK-sy-kbV" firstAttribute="top" secondItem="oNE-3O-g2r" secondAttribute="top" id="fnp-qd-D4I"/>
+                            <constraint firstItem="lyK-sy-kbV" firstAttribute="leading" secondItem="oNE-3O-g2r" secondAttribute="leading" constant="20" id="fjd-1G-AEs"/>
+                            <constraint firstItem="lyK-sy-kbV" firstAttribute="top" secondItem="oNE-3O-g2r" secondAttribute="top" id="v4Q-SF-FU7"/>
+                            <constraint firstItem="oNE-3O-g2r" firstAttribute="trailing" secondItem="lyK-sy-kbV" secondAttribute="trailing" constant="20" id="yGG-wg-vHR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oNE-3O-g2r"/>
                     </view>
                     <connections>
                         <outlet property="addDayLabel" destination="yCc-m0-ol1" id="MKr-op-HRi"/>
                         <outlet property="cancelButton" destination="c4c-hd-CJ4" id="G03-at-7wp"/>
+                        <outlet property="datePicker" destination="Ykw-Ch-D2A" id="ZoR-5F-04Z"/>
                         <outlet property="saveButton" destination="Nhz-DV-ZAQ" id="Pwf-PN-2j8"/>
                         <outlet property="subtitleDayTextField" destination="cwn-jh-Shy" id="8Sf-HQ-gaM"/>
-                        <outlet property="titleDayTextField" destination="Ssh-dC-FTd" id="gXh-57-jXn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h7a-Hy-G93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-184.05797101449278" y="30.803571428571427"/>
         </scene>

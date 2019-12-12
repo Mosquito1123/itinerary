@@ -24,9 +24,16 @@ class MockData {
     static func createMockTitleModelData() -> [DayModel] {
         var dayModels = [DayModel]()
         
-        dayModels.append(DayModel(title: "April 18", subtitle: "Exploring", data: createMockSubtitleModelData(sectionTitle: "April 18")))
-        dayModels.append(DayModel(title: "April 19", subtitle: "Scuba Diving!", data: createMockSubtitleModelData(sectionTitle: "April 19")))
-        dayModels.append(DayModel(title: "April 20", subtitle: "Time to go back home", data: createMockSubtitleModelData(sectionTitle: "April 20")))
+        dayModels.append(DayModel(title: Date(), subtitle: "Departure", data: createMockSubtitleModelData(sectionTitle: "April 18")))
+        
+        dayModels.append(DayModel(title: Date().add(days: 1), subtitle: "Exploring", data: createMockSubtitleModelData(sectionTitle: "April 19")))
+        
+        dayModels.append(DayModel(title: Date().add(days: 2), subtitle: "Scuba Diving!", data: createMockSubtitleModelData(sectionTitle: "April 20")))
+        
+        dayModels.append(DayModel(title: Date().add(days: 3), subtitle: "Volunteering", data: createMockSubtitleModelData(sectionTitle: "April 21")))
+        
+        dayModels.append(DayModel(title: Date().add(days: 4), subtitle: "Time to back home", data: createMockSubtitleModelData(sectionTitle: "April 22")))
+        
         
         return dayModels
     }
@@ -53,6 +60,18 @@ class MockData {
             mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Excursion", activityType: .excursion))
             mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Hotel", activityType: .hotel))
             mockSectionModel.append(ActivityModel(title: "Mock data3", subtitle: "Food", activityType: .food))
+        }
+        
+        if(sectionTitle == "April 21") {
+            mockSectionModel.append(ActivityModel(title: "Mock data4", subtitle: "Excursion", activityType: .excursion))
+            mockSectionModel.append(ActivityModel(title: "Mock data4", subtitle: "Hotel", activityType: .hotel))
+            mockSectionModel.append(ActivityModel(title: "Mock data4", subtitle: "Food", activityType: .food))
+        }
+        
+        if(sectionTitle == "April 22") {
+            mockSectionModel.append(ActivityModel(title: "Mock data5", subtitle: "Excursion", activityType: .excursion))
+            mockSectionModel.append(ActivityModel(title: "Mock data5", subtitle: "Hotel", activityType: .hotel))
+            mockSectionModel.append(ActivityModel(title: "Mock data5", subtitle: "Food", activityType: .food))
         }
         
         return mockSectionModel

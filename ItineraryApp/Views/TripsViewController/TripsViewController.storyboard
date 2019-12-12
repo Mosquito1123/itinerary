@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FbT-R9-nEX">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FbT-R9-nEX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -23,6 +21,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-1K-Cwp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="c0f-UZ-1ub" userLabel="Footer">
+                                    <rect key="frame" x="0.0" y="196" width="414" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripsTableViewCell" rowHeight="140" id="J6p-wU-YPU" customClass="TripsTableViewCell" customModule="ItineraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
@@ -72,8 +75,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compass_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5LC-7G-97N">
+                                <rect key="frame" x="87" y="284" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="GoX-YU-wRe"/>
+                                    <constraint firstAttribute="height" constant="240" id="W70-gK-mP0"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-KC-kO1">
-                                <rect key="frame" x="334" y="714" width="60" height="60"/>
+                                <rect key="frame" x="339" y="699" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="EOt-EZ-gSY"/>
                                     <constraint firstAttribute="height" constant="60" id="lnr-iP-iRR"/>
@@ -89,12 +99,14 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="5LC-7G-97N" firstAttribute="centerY" secondItem="ttf-9h-0qh" secondAttribute="centerY" id="9EM-1Z-alv"/>
                             <constraint firstItem="Ipl-1K-Cwp" firstAttribute="top" secondItem="ttf-9h-0qh" secondAttribute="top" id="EhR-Vu-01f"/>
                             <constraint firstItem="Ipl-1K-Cwp" firstAttribute="leading" secondItem="ttf-9h-0qh" secondAttribute="leading" id="TvY-Jb-yVz"/>
-                            <constraint firstItem="PIE-1e-gdO" firstAttribute="trailing" secondItem="F9B-KC-kO1" secondAttribute="trailing" constant="20" id="Vxz-xV-krl"/>
+                            <constraint firstItem="PIE-1e-gdO" firstAttribute="trailing" secondItem="F9B-KC-kO1" secondAttribute="trailing" constant="15" id="Vxz-xV-krl"/>
                             <constraint firstAttribute="bottom" secondItem="Ipl-1K-Cwp" secondAttribute="bottom" id="eVU-rl-7VQ"/>
                             <constraint firstAttribute="trailing" secondItem="Ipl-1K-Cwp" secondAttribute="trailing" id="jBu-ry-toA"/>
-                            <constraint firstItem="PIE-1e-gdO" firstAttribute="bottom" secondItem="F9B-KC-kO1" secondAttribute="bottom" id="r4U-0l-NMo"/>
+                            <constraint firstItem="PIE-1e-gdO" firstAttribute="bottom" secondItem="F9B-KC-kO1" secondAttribute="bottom" constant="15" id="r4U-0l-NMo"/>
+                            <constraint firstItem="5LC-7G-97N" firstAttribute="centerX" secondItem="ttf-9h-0qh" secondAttribute="centerX" id="udi-zf-huM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PIE-1e-gdO"/>
                     </view>
@@ -102,6 +114,7 @@
                     <connections>
                         <outlet property="addTripsButton" destination="F9B-KC-kO1" id="61J-s0-6Us"/>
                         <outlet property="helpView" destination="2Ac-vw-Iq1" id="bSn-de-Bsa"/>
+                        <outlet property="logoImageView" destination="5LC-7G-97N" id="ndg-En-59u"/>
                         <outlet property="tableView" destination="Ipl-1K-Cwp" id="RdE-Pt-LPi"/>
                     </connections>
                 </viewController>
@@ -137,7 +150,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YH-yI-Rfo" customClass="PopupUIButton" customModule="ItineraryApp" customModuleProvider="target">
-                                <rect key="frame" x="18" y="718" width="378" height="44"/>
+                                <rect key="frame" x="18" y="723" width="378" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RFW-MH-yhe"/>
                                 </constraints>
@@ -151,7 +164,7 @@
                             <constraint firstItem="AFv-TK-9C1" firstAttribute="top" secondItem="Lj8-ZH-4jd" secondAttribute="top" constant="40" id="Ghh-Pv-eQ5"/>
                             <constraint firstItem="AFv-TK-9C1" firstAttribute="leading" secondItem="Lj8-ZH-4jd" secondAttribute="leading" constant="18" id="VzU-a0-FNd"/>
                             <constraint firstItem="3YH-yI-Rfo" firstAttribute="leading" secondItem="Lj8-ZH-4jd" secondAttribute="leading" constant="18" id="Z64-4W-rrc"/>
-                            <constraint firstAttribute="bottom" secondItem="3YH-yI-Rfo" secondAttribute="bottom" constant="40" id="gow-KR-XmR"/>
+                            <constraint firstAttribute="bottom" secondItem="3YH-yI-Rfo" secondAttribute="bottom" constant="35" id="gow-KR-XmR"/>
                             <constraint firstAttribute="trailing" secondItem="3YH-yI-Rfo" secondAttribute="trailing" constant="18" id="hZO-Qj-rN8"/>
                             <constraint firstAttribute="trailing" secondItem="AFv-TK-9C1" secondAttribute="trailing" constant="18" id="qpX-UJ-iCd"/>
                         </constraints>
@@ -190,6 +203,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="compass_logo" width="1024" height="1024"/>
         <image name="delete_swipe" width="500" height="202"/>
         <image name="edit_swipe" width="500" height="202"/>
         <image name="plus_icon" width="100" height="100"/>

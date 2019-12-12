@@ -5,11 +5,11 @@
 //  Created by Cosmin Iulian on 13/09/2019.
 //  Copyright © 2019 Cosmin Iulian. All rights reserved.
 //
-
 import UIKit
 
-class HeaderTableViewCell: UITableViewCell {
 
+class HeaderTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
@@ -21,10 +21,10 @@ class HeaderTableViewCell: UITableViewCell {
         subtitleLabel.font = UIFont(name: Theme.bodyFontName, size: 15)
         
     }
-
+    
     func setup(model: DayModel) {
-        titleLabel.text = model.title
+        titleLabel.text = model.title.mediumDate()
         subtitleLabel.text = model.subtitle
     }
-
+    
 }

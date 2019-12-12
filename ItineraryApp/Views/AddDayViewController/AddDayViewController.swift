@@ -9,16 +9,16 @@ import UIKit
 
 
 class AddDayViewController: UIViewController {
-
+    
     @IBOutlet weak var addDayLabel: UILabel!
-    @IBOutlet weak var titleDayTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var subtitleDayTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-
     
-    var doneSaving: (() -> ())? // a variable with type function
-    var tripIndexToEdit: Int?
+    var doneSaving: ((DayModel) -> ())? // a variable with type function
+    var tripIndex: Int!
+    var tripModel: TripModel!
     
     
     override func viewDidLoad() {
@@ -35,13 +35,38 @@ class AddDayViewController: UIViewController {
     
     // Save Button Pressed
     @IBAction func saveBtnPressed(_ sender: UIButton) {
+        if alreadyExists(datePicker.date) {
+            let alert = UIAlertController(title: "Day Already Exists", message: "Choose another date", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel)
+            
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            return
+        }
         
-        guard titleDayTextField.hasValue, let newDayTitle = titleDayTextField.text else { return }
+        let dayModel = DayModel(title: datePicker.date, subtitle: subtitleDayTextField.text ?? "", data: nil)
+        //DayFunctions.createDay(at: tripIndex, using: dayModel)  ??? idk what is the problem
         
         if let doneSaving = doneSaving {
-            doneSaving()
+            doneSaving(dayModel)
         }
         dismiss(animated: true)
     }
-
+    
+    // If a date already exists return true
+    func alreadyExists(_ date: Date) -> Bool {
+        if tripModel.dayModels.contains(where: { (dayModel) -> Bool in
+            
+            return dayModel.title.mediumDate() == date.mediumDate() })
+        {
+            return true
+        }
+        return false
+    }
+    
+    // Done Action for text field (description)
+    @IBAction func doneAction(_ sender: UITextField) {
+        sender.resignFirstResponder() // dismiss the keyboard in your case
+    }
+    
 }

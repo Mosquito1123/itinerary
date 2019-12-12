@@ -10,6 +10,7 @@ import UIKit
 
 class TripsViewController: UIViewController {
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addTripsButton: UIButton!
     @IBOutlet var helpView: UIVisualEffectView!
@@ -24,6 +25,33 @@ class TripsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        view.backgroundColor = Theme.background
+        
+        addTripsButton.backgroundColor = Theme.tint
+        addTripsButton.addFloatingAndRoundedStyle()
+        
+        getTripData()
+        
+        // 200° × π/180
+        let radians = CGFloat(200 * Double.pi / 180)
+        
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn], animations: {
+            self.logoImageView.alpha = 0 // invisible
+            
+            // for 2D animation
+            self.logoImageView.transform = CGAffineTransform(rotationAngle: radians)
+                .scaledBy(x: 3, y: 3) // rotate and scale
+            
+            // for 3D animation
+            let yRotation = CATransform3DMakeRotation(radians, 0, radians, 0)
+            self.logoImageView.layer.transform = CATransform3DConcat(self.logoImageView.layer.transform, yRotation)
+        }) { (completion) in
+           // self.getTripData() !!!
+        }
+    }
+    
+    
+    fileprivate func getTripData() {
         TripFunctions.readTrip(completion: { [unowned self] in
             self.tableView.reloadData()
             
@@ -35,22 +63,18 @@ class TripsViewController: UIViewController {
                 }
             }
         })
-        
-        view.backgroundColor = Theme.background
-        
-        addTripsButton.backgroundColor = Theme.tint
-        addTripsButton.addFloatingAndRoundedStyle()
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // ! !
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toAddTripSegue" {
             let popup = segue.destination as! AddTripViewController
             popup.tripIndexToEdit = self.tripIndexToEdit
             
             popup.doneSaving = { [weak self] in
-                self?.tableView.reloadData()
+                guard let self = self else { return }
+                self.tableView.reloadData()
             }
             tripIndexToEdit = nil // reset the value of index to edit after close the popup
         }

@@ -122,6 +122,11 @@ class AddTripViewController: UIViewController {
         }
     }
     
+    // Done Action for text field (trip title)
+    @IBAction func doneAction(_ sender: UITextField) {
+        sender.resignFirstResponder() // dismiss the keyboard in your case
+    }
+    
 }
 
 

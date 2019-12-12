@@ -47,7 +47,7 @@ class ActivitiesTableViewCell: UITableViewCell {
         case .hotel:
             return #imageLiteral(resourceName: "Hotel")
         }
-   
+        
     }
     
 }
