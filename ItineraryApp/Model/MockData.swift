@@ -8,9 +8,9 @@
 import Foundation
 
 
-class MockData {
+public class MockData {
     
-    static func createMockTripModelData() -> [TripModel] {
+    public static func createMockTripModelData() -> [TripModel] {
         
         var mockTrips = [TripModel]()
         mockTrips.append(TripModel(title: "New York", image:#imageLiteral(resourceName: "new_york"), dayModels: createMockTitleModelData()))
@@ -21,7 +21,7 @@ class MockData {
     }
     
     
-    static func createMockTitleModelData() -> [DayModel] {
+    public static func createMockTitleModelData() -> [DayModel] {
         var dayModels = [DayModel]()
         
         dayModels.append(DayModel(title: Date(), subtitle: "Departure", data: createMockSubtitleModelData(sectionTitle: "April 18")))
@@ -40,7 +40,7 @@ class MockData {
     
     
     
-    static func createMockSubtitleModelData(sectionTitle: String) -> [ActivityModel] {
+    public static func createMockSubtitleModelData(sectionTitle: String) -> [ActivityModel] {
         
         var mockSectionModel = [ActivityModel]()
         

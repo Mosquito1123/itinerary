@@ -8,13 +8,13 @@
 import UIKit
 
 
-class TripModel {
+public class TripModel {
     
-    let id: UUID // this is not a string because I optimized memory in that way
-    var title: String
-    var image: UIImage?
+    public let id: UUID // this is not a string because I optimized memory in that way
+    public var title: String
+    public var image: UIImage?
     // model of days
-    var dayModels = [DayModel]() {
+    public var dayModels = [DayModel]() {
         didSet{ // Observer
             // Called when a new value is assigned to dayModels
             dayModels = dayModels.sorted(by: <)
@@ -22,7 +22,7 @@ class TripModel {
     }
     
     
-    init(title: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
+    public init(title: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
         id = UUID()
         self.title = title
         self.image = image

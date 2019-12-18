@@ -8,13 +8,13 @@
 import UIKit
 
 
-class HeaderTableViewCell: UITableViewCell {
+public class HeaderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         titleLabel.font = UIFont(name: Theme.bodyFontNameBold, size: 17)

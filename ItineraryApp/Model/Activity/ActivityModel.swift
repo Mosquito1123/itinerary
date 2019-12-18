@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 
-struct ActivityModel {
-    var id: String!
-    var title = ""
+public struct ActivityModel {
+    public var id: String!
+    public var title = ""
     var subtitle = ""
     var activityType: ActivityType
     var photo: UIImage?
@@ -29,7 +29,7 @@ struct ActivityModel {
 
 extension ActivityModel: Equatable {
     
-    static func == (lhs: ActivityModel, rhs: ActivityModel) -> Bool {
+    public static func == (lhs: ActivityModel, rhs: ActivityModel) -> Bool {
         return lhs.id == rhs.id 
     }
 }

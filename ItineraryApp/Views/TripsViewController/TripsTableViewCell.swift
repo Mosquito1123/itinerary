@@ -29,6 +29,7 @@ class TripsTableViewCell: UITableViewCell {
     
     
     func setup(tripModel: TripModel){
+        print(tripModel)
         
         titleLabel.text = tripModel.title
         

@@ -8,16 +8,17 @@
 import UIKit
 
 
-class TripFunctions {
+public class TripFunctions {
     
     // just adding a new TripModel object in your
     // tripModels array
-    static func createTrip(tripModel: TripModel) {
+    public static func createTrip(tripModel: TripModel) {
+        print(tripModel)
         Data.tripModels.append(tripModel)
     }
     
     
-    static func readTrip(completion: @escaping () -> ()) {
+   public static func readTrip(completion: @escaping () -> ()) {
         // Replace with real data store code
         
         DispatchQueue.global(qos: .userInteractive).async { // thread
@@ -31,7 +32,7 @@ class TripFunctions {
     }
     
     
-    static func readTrip(by id: UUID, completion: @escaping (TripModel?) -> ()) {
+    public static func readTrip(by id: UUID, completion: @escaping (TripModel?) -> ()) {
         // Replace with real data store code
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -44,13 +45,13 @@ class TripFunctions {
     }
     
     
-    static func updateTrip(at index: Int, title: String, image: UIImage? = nil) {
+    public static func updateTrip(at index: Int, title: String, image: UIImage? = nil) {
         Data.tripModels[index].title = title
         Data.tripModels[index].image = image
     }
     
     
-    static func deleteTrip(index: Int) {
+    public static func deleteTrip(index: Int) {
         Data.tripModels.remove(at: index)
     }
     

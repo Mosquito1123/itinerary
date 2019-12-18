@@ -43,13 +43,33 @@
 		39FAEDC723159F01008E0B5D /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */; };
 		39FAEDCB2315A26D008E0B5D /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FAEDCA2315A26D008E0B5D /* TripsViewController.swift */; };
 		39FC92552332512B00597683 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FC92542332512B00597683 /* DateExtension.swift */; };
+		F30D09C823A2B6F400C885C6 /* Tortoise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30D09C623A2B6EC00C885C6 /* Tortoise.framework */; };
+		F30D09C923A2B6F400C885C6 /* Tortoise.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F30D09C623A2B6EC00C885C6 /* Tortoise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F30D09CD23A2B74000C885C6 /* Muse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30D09CB23A2B72100C885C6 /* Muse.framework */; };
+		F30D09CE23A2B74000C885C6 /* Muse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F30D09CB23A2B72100C885C6 /* Muse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F35DC73623A4EF1700482346 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F35DC73523A4EF1700482346 /* Default-568h@2x.png */; };
+		F35DC73A23A4F12B00482346 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F35DC73C23A4F12B00482346 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F30D09CA23A2B6F400C885C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F30D09CE23A2B74000C885C6 /* Muse.framework in Embed Frameworks */,
+				F30D09C923A2B6F400C885C6 /* Tortoise.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3906985D2311B7410063FEB9 /* ItineraryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItineraryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		390698602311B7410063FEB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3906986A2311B7430063FEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3906986C2311B7430063FEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3908B0F6232FBF2000CCBFB2 /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
 		3908B0F8232FBF3B00CCBFB2 /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		3909C218232B8D41002E0927 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +104,13 @@
 		39FAEDC623159F01008E0B5D /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		39FAEDCA2315A26D008E0B5D /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		39FC92542332512B00597683 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F30AD45F23A8C4D20056B1A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		F30D09C623A2B6EC00C885C6 /* Tortoise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tortoise.framework; sourceTree = "<group>"; };
+		F30D09CB23A2B72100C885C6 /* Muse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Muse.framework; sourceTree = "<group>"; };
+		F30D09D023A2B8EB00C885C6 /* ItineraryApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ItineraryApp.entitlements; sourceTree = "<group>"; };
+		F35DC73523A4EF1700482346 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F35DC73B23A4F12B00482346 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F35DC73D23A4F13000482346 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30D09CD23A2B74000C885C6 /* Muse.framework in Frameworks */,
+				F30D09C823A2B6F400C885C6 /* Tortoise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +129,10 @@
 		390698542311B7410063FEB9 = {
 			isa = PBXGroup;
 			children = (
+				F35DC73523A4EF1700482346 /* Default-568h@2x.png */,
 				3906985F2311B7410063FEB9 /* ItineraryApp */,
 				3906985E2311B7410063FEB9 /* Products */,
+				F30D09CC23A2B74000C885C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,13 +147,17 @@
 		3906985F2311B7410063FEB9 /* ItineraryApp */ = {
 			isa = PBXGroup;
 			children = (
+				F30AD46023A8C4D20056B1A0 /* Info.plist */,
+				F30D09D023A2B8EB00C885C6 /* ItineraryApp.entitlements */,
 				393CB8CB231A8A7E00D33F24 /* Resources */,
 				39378C1123127B1A00AA1389 /* Model */,
 				39FAEDC423159E7E008E0B5D /* Views */,
 				390698602311B7410063FEB9 /* AppDelegate.swift */,
+				F30D09CB23A2B72100C885C6 /* Muse.framework */,
+				F30D09C623A2B6EC00C885C6 /* Tortoise.framework */,
 				3969B141231FF3C70000E1CC /* Assets.xcassets */,
 				390698692311B7430063FEB9 /* LaunchScreen.storyboard */,
-				3906986C2311B7430063FEB9 /* Info.plist */,
+				F35DC73C23A4F12B00482346 /* InfoPlist.strings */,
 			);
 			path = ItineraryApp;
 			sourceTree = "<group>";
@@ -261,6 +296,13 @@
 			path = TripsViewController;
 			sourceTree = "<group>";
 		};
+		F30D09CC23A2B74000C885C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +313,8 @@
 				390698592311B7410063FEB9 /* Sources */,
 				3906985A2311B7410063FEB9 /* Frameworks */,
 				3906985B2311B7410063FEB9 /* Resources */,
+				F30D09CA23A2B6F400C885C6 /* Embed Frameworks */,
+				F30D09CF23A2B85500C885C6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -303,6 +347,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 390698542311B7410063FEB9;
 			productRefGroup = 3906985E2311B7410063FEB9 /* Products */;
@@ -319,6 +364,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35DC73A23A4F12B00482346 /* InfoPlist.strings in Resources */,
+				F35DC73623A4EF1700482346 /* Default-568h@2x.png in Resources */,
 				39B63F3D231D5C2300D9965E /* AddTripViewController.storyboard in Resources */,
 				393CB8D1231A8CC100D33F24 /* Colors.xcassets in Resources */,
 				3906986B2311B7430063FEB9 /* LaunchScreen.storyboard in Resources */,
@@ -332,6 +379,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F30D09CF23A2B85500C885C6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		390698592311B7410063FEB9 /* Sources */ = {
@@ -379,6 +446,23 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F30AD46023A8C4D20056B1A0 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F30AD45F23A8C4D20056B1A0 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		F35DC73C23A4F12B00482346 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35DC73B23A4F12B00482346 /* en */,
+				F35DC73D23A4F13000482346 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -386,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -433,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -447,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -488,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -502,15 +588,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ItineraryApp/ItineraryApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5834N7JNG4;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = T6LHYPB922;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ItineraryApp",
+				);
 				INFOPLIST_FILE = ItineraryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wordpress.cosminiuliang.ItineraryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itinerary.janetpulitzer;
+				PRODUCT_NAME = ItineraryApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -520,15 +615,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ItineraryApp/ItineraryApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5834N7JNG4;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = T6LHYPB922;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ItineraryApp",
+				);
 				INFOPLIST_FILE = ItineraryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wordpress.cosminiuliang.ItineraryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itinerary.janetpulitzer;
+				PRODUCT_NAME = ItineraryApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
